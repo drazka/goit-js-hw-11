@@ -1,9 +1,9 @@
 document.getElementById('searchForm').addEventListener('submit', function(event) {
             event.preventDefault();
             console.log("button");
-            const query = document.getElementById('searchQuery').value;
+            const q = document.getElementById('searchQuery').value;
             const apiKey = '46413447-a6948cf821c6d061f8e7d4db1';
-            const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(query)}&image_type=photo&orientation=horizontal&safesearch=true`;
+            const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(q)}&image_type=photo&orientation=horizontal&safesearch=true`;
 
             fetch(url)
                 .then(response => response.json())
