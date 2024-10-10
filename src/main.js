@@ -53,7 +53,8 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
                     galleryDiv.appendChild(imageCard);
                 });
 
-                new SimpleLightbox('#gallery a', { /* options */ });
+                const lightbox = new SimpleLightbox('#gallery a', { /* options */ });
+                lightbox.refresh();
             }
         })
         .catch(error => console.error('Error fetching data:', error))
