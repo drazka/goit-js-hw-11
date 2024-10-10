@@ -12,10 +12,14 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
                     galleryDiv.innerHTML = ''; 
 
                     if (data.hits.length === 0) {
-                        iziToast.info({
-                            title: 'Brak wyników',
+                        iziToast.error({
                             message: 'Sorry, there are no images matching your search query. Please try again!',
-                            position: 'topCenter'
+                            position: 'topCenter',
+                            backgroundColor: '#EF4040',
+                            position: 'topRight',
+                            iconUrl: './img/x-octagon.svg',
+                            iconColor: 'white',
+                            messageColor: '#FAFAFB'
                         });
                     } else {
                         data.hits.forEach(hit => {
